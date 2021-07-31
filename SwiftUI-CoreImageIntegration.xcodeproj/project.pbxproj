@@ -16,6 +16,10 @@
 		2DD801EE26B57BC50003B7A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD801EC26B57BC50003B7A2 /* LaunchScreen.storyboard */; };
 		2DD801F926B57BC60003B7A2 /* SwiftUI_CoreImageIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD801F826B57BC60003B7A2 /* SwiftUI_CoreImageIntegrationTests.swift */; };
 		2DD8020426B57BC70003B7A2 /* SwiftUI_CoreImageIntegrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8020326B57BC70003B7A2 /* SwiftUI_CoreImageIntegrationUITests.swift */; };
+		2DD8021626B599700003B7A2 /* ImageDetectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8021526B599700003B7A2 /* ImageDetectionViewModel.swift */; };
+		2DD8022226B599880003B7A2 /* ImageDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8022126B599880003B7A2 /* ImageDetectionManager.swift */; };
+		2DD8023126B5A6D10003B7A2 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8023026B5A6D10003B7A2 /* UIImage+Extensions.swift */; };
+		2DD8023A26B5AE590003B7A2 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2DD8023926B5AE590003B7A2 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		2DD801FF26B57BC70003B7A2 /* SwiftUI-CoreImageIntegrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI-CoreImageIntegrationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD8020326B57BC70003B7A2 /* SwiftUI_CoreImageIntegrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_CoreImageIntegrationUITests.swift; sourceTree = "<group>"; };
 		2DD8020526B57BC70003B7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DD8021526B599700003B7A2 /* ImageDetectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetectionViewModel.swift; sourceTree = "<group>"; };
+		2DD8022126B599880003B7A2 /* ImageDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetectionManager.swift; sourceTree = "<group>"; };
+		2DD8023026B5A6D10003B7A2 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		2DD8023926B5AE590003B7A2 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,10 @@
 		2DD801DD26B57BC00003B7A2 /* SwiftUI-CoreImageIntegration */ = {
 			isa = PBXGroup;
 			children = (
+				2DD8022F26B5A6C30003B7A2 /* Extensions */,
+				2DD8022926B59DD90003B7A2 /* CoreML Files */,
+				2DD8021D26B599740003B7A2 /* Manager */,
+				2DD8021426B5995D0003B7A2 /* Model */,
 				2DD801DE26B57BC00003B7A2 /* AppDelegate.swift */,
 				2DD801E026B57BC00003B7A2 /* SceneDelegate.swift */,
 				2DD801E226B57BC00003B7A2 /* ContentView.swift */,
@@ -137,6 +149,38 @@
 				2DD8020526B57BC70003B7A2 /* Info.plist */,
 			);
 			path = "SwiftUI-CoreImageIntegrationUITests";
+			sourceTree = "<group>";
+		};
+		2DD8021426B5995D0003B7A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DD8021526B599700003B7A2 /* ImageDetectionViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DD8021D26B599740003B7A2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2DD8022126B599880003B7A2 /* ImageDetectionManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2DD8022926B59DD90003B7A2 /* CoreML Files */ = {
+			isa = PBXGroup;
+			children = (
+				2DD8023926B5AE590003B7A2 /* Resnet50.mlmodel */,
+			);
+			path = "CoreML Files";
+			sourceTree = "<group>";
+		};
+		2DD8022F26B5A6C30003B7A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DD8023026B5A6D10003B7A2 /* UIImage+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +314,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DD801DF26B57BC00003B7A2 /* AppDelegate.swift in Sources */,
+				2DD8022226B599880003B7A2 /* ImageDetectionManager.swift in Sources */,
+				2DD8021626B599700003B7A2 /* ImageDetectionViewModel.swift in Sources */,
 				2DD801E126B57BC00003B7A2 /* SceneDelegate.swift in Sources */,
 				2DD801E326B57BC00003B7A2 /* ContentView.swift in Sources */,
 				2DD801E626B57BC00003B7A2 /* SwiftUI_CoreImageIntegration.xcdatamodeld in Sources */,
+				2DD8023A26B5AE590003B7A2 /* Resnet50.mlmodel in Sources */,
+				2DD8023126B5A6D10003B7A2 /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
